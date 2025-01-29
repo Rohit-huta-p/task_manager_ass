@@ -25,7 +25,9 @@ const Signup = () => {
       try {
         setIsLoading(true);
         const response = await axiosInstance.post('/api/user/signup', signUpData)
-        if(response.statusText === 'Created'){
+        console.log(response);
+        
+        if(response.status === 201){
           navigate('/login')
           setIsLoading(false)
         }
