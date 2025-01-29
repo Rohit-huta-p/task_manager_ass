@@ -3,7 +3,7 @@ import axios from "axios";
 axios.defaults.withCredentials = true;
 const axiosInstance = axios.create({
     // baseURL: "http://localhost:8000",
-    baseURL: "https://task-manager-ass.vercel.app"
+    baseURL: "https://task-manager-backend-imjr.onrender.com"
 })
 axiosInstance.interceptors.request.use((config) => {
     const token = localStorage.getItem('authToken');
